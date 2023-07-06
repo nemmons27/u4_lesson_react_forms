@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
+import Form from './components/form'
 
 const App = () => {
   const [issues, setIssues] = useState([])
@@ -20,6 +21,7 @@ const App = () => {
 
   return (
     <div>
+      <Form getIssues={getIssues}/>
       <h1>Issues:</h1>
       {issues.map((issue) => (
         <div key={issue._id}>
